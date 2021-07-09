@@ -2,7 +2,7 @@
 
 'Sample' includes the images corresponding to 'AlexNet'.
 
-There is a instruction(README) in the AlexNet folder.
+ There is a instruction(README) in the AlexNet folder which contains more detailed information about specific steps and code.
 
 Paper: https://www.hindawi.com/journals/cin/2021/4812979/
 
