@@ -52,3 +52,9 @@ To Overall test on your own test images, put the test images under  Input/test, 
 ```
 python AllTest.py
 
+### Save the model
+
+```
+Download link of the trained oil spill classifier and generator model for oil spill segmentation
+链接：https://pan.baidu.com/s/1zURvhA0PZ0L79DD9fVDkNg 
+提取码：8888
