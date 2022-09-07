@@ -4,7 +4,7 @@ from sklearn import metrics
 import numpy as np
 
 import matplotlib.pyplot as plt
-#mg = Image.open(r'C:\Users\17578\Desktop\数据\data2\TestResult\TestResult_model\test7_0.7.jpg')  # 打开图片
+
 img = Image.open('TestResult/TestResult_model/test12_0.7.jpg')  # 打开图片 生成的结果图
 #img= img.resize((256, 256), Image.ANTIALIAS)
 img2=Image.open('Input/TestSet/test12.jpg')  # 打图片 原图
