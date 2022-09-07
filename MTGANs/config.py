@@ -24,7 +24,7 @@ def get_arguments():
     parser.add_argument('--padd_size',type=int,help='net pad size',default = 1)
         
     #pyramid parameters:
-    parser.add_argument('--scale_num', type=float, help='pyramid scale num', default = 0) #lyq add scale_num 0315
+    parser.add_argument('--scale_num', type=float, help='pyramid scale num', default = 0)
     parser.add_argument('--scale_factor',type=float,help='pyramid scale factor',default = 0.5)
     parser.add_argument('--noise_amp',type=float,help='addative noise cont weight',default=1) # noise_amp
     parser.add_argument('--min_size',type=int,help='image minimal size at the coarser scale',default = 25)
