@@ -2,7 +2,6 @@ from PIL import Image
 from sklearn.metrics import recall_score,precision_score,accuracy_score,f1_score
 from sklearn import metrics
 import numpy as np
-
 import matplotlib.pyplot as plt
 
 img = Image.open('TestResult/TestResult_model/test12_0.7.jpg')  # 
