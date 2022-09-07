@@ -5,11 +5,11 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-img = Image.open('TestResult/TestResult_model/test12_0.7.jpg')  # 打开图片 生成的结果图
+img = Image.open('TestResult/TestResult_model/test12_0.7.jpg')  # 
 #img= img.resize((256, 256), Image.ANTIALIAS)
-img2=Image.open('Input/TestSet/test12.jpg')  # 打图片 原图
-w = img2.width       #图片的宽
-h = img2.height      #图片的高
+img2=Image.open('Input/TestSet/test12.jpg')  # 
+w = img2.width       #
+h = img2.height      #
 box = (w*0.5,0,w,h)
 img2 = img2.crop(box)
 
@@ -20,9 +20,9 @@ m=0
 lst1 = []
 lst2 = []
 for h in range(img.size[1]):
-    for w in range(img.size[0]):  # img.size 会显示图片的宽度和高度值，由于我们要一行一行的来，所以要将 w 放在内层循环。
-        gray_value = img.getpixel((w, h))  # 获取每一个像素的灰度值
-        if gray_value == (255,255,255):  # 0代表溢油    (0,0,0)黑，(255,255,255)是白
+    for w in range(img.size[0]):  # img.size 
+        gray_value = img.getpixel((w, h))  # 
+        if gray_value == (255,255,255):  # 
             gray_value=1
         else:
             gray_value=0
@@ -33,7 +33,7 @@ for h in range(img.size[1]):
 for h in range(img2.size[1]):
     for w in range(img2.size[0]):
         gray_value2 = img2.getpixel((w, h))
-        if gray_value2 ==(255,255,255):  # 如果灰度值为0，代表溢油    0黑，255是白
+        if gray_value2 ==(255,255,255):  # 
             gray_value2=1
         else:
             gray_value2=0
@@ -48,15 +48,8 @@ print('Accuracy:',accuracy_score(lst2, lst1))  #
 print('Precision:',precision_score(lst2, lst1, average='macro'))  #
 print('Recall:',recall_score(lst2, lst1, average='macro'))  #
 print('F1:',f1_score(lst2, lst1, average='macro'))  #
-'''
-   kappa值，Kappa系数就经常被用于影像分类的空间一致性检验
-   0.00到0.20：极低的一致性（Slight）
-   0.21到0.40：一般的一致性（Fair）
-   0.41到0.60：中等的一致性（Moderate）
-   0.61到0.80：高度的一致性（Substantial）
-   0.81到1.00：几乎完全一致（Almost Perfect）
-'''
-#print('混淆矩阵输出:',metrics.confusion_matrix(lst2, lst1))#混淆矩阵输出
+
+
 pe_rows = np.sum(metrics.confusion_matrix(lst2, lst1), axis=0)
 pe_cols = np.sum(metrics.confusion_matrix(lst2, lst1), axis=1)
 sum_total = sum(pe_cols)
@@ -72,12 +65,12 @@ f1 = []
 Kappa = []
 mIoU =[]
 for test_num in range(1, 21,1):  # the index of test images
-    img = Image.open('TestResult/TestResult_model/test%s_0.7.jpg' % (test_num))  # 打开图片 生成的结果图
+    img = Image.open('TestResult/TestResult_model/test%s.jpg' % (test_num))  # 
     # img= img.resize((256, 256), Image.ANTIALIAS)
-    img2 = Image.open('Input/TestSet/test%s.jpg' % (test_num))  # 打图片 原图
+    img2 = Image.open('Input/TestSet/test%s.jpg' % (test_num))  # 
 
-    w = img2.width  # 图片的宽
-    h = img2.height  # 图片的高
+    w = img2.width  # 
+    h = img2.height  # 
     box = (w * 0.5, 0, w, h)
     img2 = img2.crop(box)
     print('------------计算第%s张图像------------'% (test_num))
@@ -87,9 +80,9 @@ for test_num in range(1, 21,1):  # the index of test images
     lst1 = []
     lst2 = []
     for h in range(img.size[1]):
-        for w in range(img.size[0]):  # img.size 会显示图片的宽度和高度值，由于我们要一行一行的来，所以要将 w 放在内层循环。
-            gray_value = img.getpixel((w, h))  # 获取每一个像素的灰度值
-            if gray_value == (255, 255, 255):  # 0代表溢油    (0,0,0)黑，(255,255,255)是白
+        for w in range(img.size[0]):  # 。
+            gray_value = img.getpixel((w, h))  #
+            if gray_value == (255, 255, 255):  #
                 gray_value = 1
             else:
                 gray_value = 0
@@ -100,7 +93,7 @@ for test_num in range(1, 21,1):  # the index of test images
     for h in range(img2.size[1]):
         for w in range(img2.size[0]):
             gray_value2 = img2.getpixel((w, h))
-            if gray_value2 == (255, 255, 255):  # 如果灰度值为0，代表溢油    0黑，255是白
+            if gray_value2 == (255, 255, 255):  # 
                 gray_value2 = 1
             else:
                 gray_value2 = 0
@@ -131,10 +124,10 @@ for test_num in range(1, 21,1):  # the index of test images
     Per_class_IoU = np.diag(metrics.confusion_matrix(lst2, lst1)) / (
             np.sum(metrics.confusion_matrix(lst2, lst1), axis=1) + np.sum(metrics.confusion_matrix(lst2, lst1), axis=0) -
             np.diag(metrics.confusion_matrix(lst2, lst1)))
-    MIoU = np.nanmean(Per_class_IoU)  # 跳过0值求mean
+    MIoU = np.nanmean(Per_class_IoU)  # 
     print('MIoU', MIoU)
     mIoU.append(MIoU)
-#计算平均性能
+
 i=0
 b = len(accuracy)
 print(b)
