@@ -42,7 +42,7 @@ python ClassifyTest.py
 To test Segmentation model on your own test images, put the test images under Input/TestSet, and run
 
 ```
-python test.py
+python Segmentation_test.py
 ```
 
 
