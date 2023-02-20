@@ -8,3 +8,6 @@ Paper: 《Detection of Oil Spill Using SAR Imagery Based on AlexNet Model》
        https://www.hindawi.com/journals/cin/2021/4812979/
 
 Note: AlexNet.h5 is uploaded to Link:  链接：https://pan.baidu.com/s/11sytPA0MIF-7xy6LeScwcA code: w3yz 
+
+'AlexNet' is the source code for paper: 《Detection of Oil Spill Using SAR Imagery Based on AlexNet Model》
+https://www.hindawi.com/journals/cin/2021/4812979/
