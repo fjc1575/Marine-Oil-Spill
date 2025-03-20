@@ -1,0 +1,12 @@
+SOURCE: Source
+TARGET: Target
+NUM_WORKERS: 0
+TRAIN:
+  DA_METHOD: AdvEnt
+  MODEL: DeepLabv3
+  RESTORE_FROM: E:\root\code\EUDA-PLR\pretrained_models\model_118000.pth
+  MULTI_LEVEL: False
+  LAMBDA_ADV_MAIN: 0.01
+  LAMBDA_ADV_AUX: 0.002
+TEST:
+  MODE: best

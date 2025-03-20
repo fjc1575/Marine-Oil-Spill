@@ -1,0 +1,20 @@
+SOURCE: TargetEasy
+TARGET: TargetHard
+DATA_DIRECTORY_SOURCE: E:\root\code\EUDA-PLR\data\Target
+DATA_LIST_SOURCE: E:\root\code\EUDA-PLR\easy_split.txt
+DATA_LIST_TARGET: E:\root\code\EUDA-PLR\hard_split.txt
+NUM_WORKERS: 0
+TRAIN:
+  INPUT_SIZE_SOURCE:
+    - 512
+    - 512
+  DA_METHOD: TeacherStudent
+  MODEL: DeepLabv3
+  RESTORE_FROM: E:\root\code\EUDA-PLR\experiments\snapshots\Source2Target_DeepLabv3_AdvEnt\model_15000.pth
+  MULTI_LEVEL: False
+  LEARNING_RATE: 0.0004
+  LAMBDA_ADV_MAIN: 0.001
+  LAMBDA_ADV_AUX: 0.0002
+  TEACHER_MODEL_ALPHA: 0.99
+TEST:
+  MODE: best
