@@ -9,3 +9,5 @@
 'MIDLN' is the source code for paper: 《Multi-physical Interpretable Deep Learning Network for Oil Spill Identification Based on SAR Images》
 
 'RITN' is the source code for paper: 《A Reversible and Interpretable Transformer Network for Image Semantic Segmentation》
+
+'LSAT' is the source code for paper: 《A Lightweight Structure-Aware Transformer with Scale Regularization for Object Detection in Remote Sensing Images》
